@@ -1,0 +1,939 @@
+/* FONT */
+
+
+/* FONT */
+
+/* BODY */
+
+.body_home {
+    background-image: url("assets/images/bg_site.png");
+    background-size: cover;
+}
+
+.body_maps {
+    background-image: url("assets/images/bg_maps.png");
+    background-size: cover;
+}
+
+.body_portfolio {
+    background-image: url("assets/images/bg_portfolio.png");
+    background-size: cover;
+}
+
+
+a {
+    color: inherit;          /* garde la couleur du texte normal */
+    text-decoration: none;   /* enlève le soulignement si tu veux */
+}
+
+a:visited {
+    color: inherit;          /* même couleur après clic */
+}
+
+/*         */
+/* NAV BAR */
+/*         */
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    font-family: 'MinecraftTen';
+    color: rgba(255, 255, 255);
+    opacity: 1;
+    font-size: 3rem;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.portfolio_nav {
+    font-family: 'Minecraft Ten font cyrillic';
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
+    opacity: 0.6;
+    transform: translateY(0);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.portfolio_nav:hover {
+    opacity: 2;
+    transform: translateY(-10px);
+}
+
+.maps_nav {
+    font-family: 'Minecraft Ten font cyrillic';
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
+    opacity: 0.6;
+    transform: translateY(0);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.maps_nav:hover {
+    opacity: 2;
+    transform: translateY(-10px);
+}
+
+.home_nav {
+    font-family: 'Minecraft Ten font cyrillic';
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
+    opacity: 0.6;
+    transform: translateY(0);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.home_nav:hover {
+    opacity: 2;
+    transform: translateY(-10px);
+}
+
+#logo_navbar {
+    position: fixed;
+    z-index: 1000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    will-change: transform;
+}
+
+#logo_navbar_maps {
+    position: fixed;
+    z-index: 1000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    will-change: transform;
+}
+
+#logo_navbar_portfolio {
+    position: fixed;
+    z-index: 1000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    will-change: transform;
+}
+
+/*         */
+/* NAV BAR */
+/*         */
+
+.bg_header {
+    margin: 0;              /* Supprime les marges par défaut */
+    overflow-x: hidden;     /* Empêche la barre horizontale */
+    width: 100%;            /* L'image prend toute la largeur */
+    height: auto;           /* Garde les proportions */
+    display: block;         /* Supprime les petits espaces sous l'image */
+}
+
+#bg_fade {
+    top: 300px;
+    position: absolute;
+    width: 99%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.rectangle_1 {
+    position: relative;
+    top: 1150px;
+    left: 15%;
+
+    width: 70%;              /* largeur du rectangle */
+    height: 800px;             /* hauteur du rectangle */
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 12px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+}
+
+/* Ajout du bruit avec un pseudo-élément */
+.rectangle_1::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_1 {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.contenu_rectangle_1 h3 {
+    transform: translateX(37%);
+    font-size: 3.5rem;
+    text-shadow: 8.5px 8.5px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Minecraft Ten font cyrillic';
+    color: white;
+}
+
+.contenu_rectangle_1 p {
+    font-size: 1.75rem;
+    text-align: center;
+    text-shadow: 4.25px 4.25px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Minecraftia';
+    color: white;
+}
+
+.slider {
+    position: relative;
+    top: 1400px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.slider h3 {
+    transform: translateX(41%);
+    font-size: 3.5rem;
+    text-shadow: 8.5px 8.5px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Minecraft Ten font cyrillic';
+    color: white;
+}
+
+.slider-track {
+    display: inline-flex;
+    animation: scroll 90s linear infinite;
+}
+
+.slider-track div {
+    width: 250;
+    height: auto;
+    margin-right: 30px;
+    padding: 20px;
+}
+
+.slider-track img {
+    border-radius: 20px;
+}
+
+@keyframes scroll {
+    0% {
+    transform: translateX(0);
+    }
+    100% {
+    transform: translateX(-50%);
+    }
+}
+
+.rectangle_slider {
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 25px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+}
+
+/* Ajout du bruit avec un pseudo-élément */
+.rectangle_slider::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+/*                                      */
+/*                                      */
+/*                                      */
+
+.rectangle_2 {
+    position: relative;
+    top: 1750px;
+    left: 15%;
+
+    width: 70%;              /* largeur du rectangle */
+    height: 450px;             /* hauteur du rectangle */
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 12px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+}
+
+/* Ajout du bruit avec un pseudo-élément */
+.rectangle_2::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_2 {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.contenu_rectangle_2 h3 {
+    transform: translateX(20%);
+    font-size: 3.5rem;
+    text-shadow: 8.5px 8.5px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Minecraft Ten font cyrillic';
+    color: white;
+}
+
+.contenu_rectangle_2 p {
+    font-size: 2.75rem;
+    text-align: center;
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Minecraftia';
+    color: white;
+}
+
+/*                                      */
+/*                                      */
+/*                                      */
+
+.rectangle_footer {
+    position: relative;
+    top: 2000px;
+    width: 100%;              /* largeur du rectangle */
+    height: 180px;             /* hauteur du rectangle */
+    background: rgba(0, 0, 0, 0.4); /* blanc à 50% d’opacité */
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+}
+
+/* Ajout du bruit avec un pseudo-élément */
+.rectangle_footer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.1;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_footer {
+    padding: 1%;
+}
+
+.contenu_rectangle_footer p {
+    font-size: 2.75rem;
+    text-align: center;
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Minecraftia';
+    color: white;
+}
+
+/* MAPS */
+
+.rectangle_maps_bg {
+    position: relative;
+    top: 1150px;
+    left: 24%;
+
+    width: 700px;
+    height: 700px;
+    
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 25px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+}
+
+.rectangle_maps_bg img {
+    border-radius: 25px;
+    padding: 7%;
+}
+
+.rectangle_maps_bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.maps_releases {
+    display: inline-flex;
+    gap: 150px;
+}
+
+.rectangle_maps_1_title {
+    position: relative;
+    top: 1160px;
+    left: 24%;
+
+    width: 700px;
+    height: 60px;
+    
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 200px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+}
+
+.rectangle_maps_1_title::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_maps_1_title {
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 4.25px 4.25px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Minecraftia';
+    color: white;
+    margin-top: -3.5%;
+}
+
+.rectangle_maps_1_desc {
+    position: relative;
+    top: 1170px;
+    left: 24%;
+
+    width: 700px;
+    height: 330px;
+    
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 25px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+}
+
+.rectangle_maps_1_desc::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_maps_1_desc {
+    font-size: 1.75rem;
+    text-align: center;
+    font-family: 'Minecraftia';
+    line-height: 1.5;
+    color: white;
+    padding: 2%;
+}
+
+.rectangle_maps_1_trailer {
+    position: relative;
+    top: 1180px;
+    left: 105%;
+
+    width: 250px;
+    height: 70px;
+    
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 15px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+
+    transform: translateY(0px);
+    opacity: 0.8;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.rectangle_maps_1_trailer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_maps_1_trailer img {
+    display: inline;
+    padding-top: 3%;
+    padding-left: 5%;
+}
+
+.contenu_rectangle_maps_1_trailer p {
+    font-size: 1.75rem;
+    text-align: center;
+    font-family: 'Minecraftia';
+    color: white;
+    display: inline;
+    padding-left: 5%;
+}
+
+.rectangle_maps_1_trailer:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.rectangle_maps_1_download {
+    position: relative;
+    top: 1180px;
+    left: 105%;
+
+    width: 70px;
+    height: 70px;
+    
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 15px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+
+    transform: translateY(0px);
+    opacity: 0.8;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.rectangle_maps_1_download::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_maps_1_download img {
+    padding: 2%;
+}
+
+.trailer-download {
+    display: inline-flex;
+    gap: 15px;
+}
+
+.rectangle_maps_1_download:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* MAP 2 */
+
+.rectangle_maps_2_title {
+    position: relative;
+    top: 1160px;
+    left: 24%;
+
+    width: 700px;
+    height: 60px;
+    
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 200px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+}
+
+.rectangle_maps_2_title::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_maps_2_title {
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 4.25px 4.25px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Minecraftia';
+    color: white;
+    margin-top: -3.5%;
+}
+
+.rectangle_maps_2_desc {
+    position: relative;
+    top: 1170px;
+    left: 24%;
+
+    width: 700px;
+    height: 330px;
+    
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 25px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+}
+
+.rectangle_maps_2_desc::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_maps_2_desc {
+    font-size: 1.75rem;
+    text-align: center;
+    font-family: 'Minecraftia';
+    line-height: 1.5;
+    color: white;
+    padding: 2%;
+}
+
+.rectangle_maps_2_trailer {
+    position: relative;
+    top: 1180px;
+    left: 105%;
+
+    width: 250px;
+    height: 70px;
+    
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 15px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+
+    transform: translateY(0px);
+    opacity: 0.8;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.rectangle_maps_2_trailer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_maps_2_trailer img {
+    display: inline;
+    padding-top: 3%;
+    padding-left: 5%;
+}
+
+.contenu_rectangle_maps_2_trailer p {
+    font-size: 1.75rem;
+    text-align: center;
+    font-family: 'Minecraftia';
+    color: white;
+    display: inline;
+    padding-left: 5%;
+}
+
+.rectangle_maps_2_trailer:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.rectangle_maps_2_download {
+    position: relative;
+    top: 1180px;
+    left: 105%;
+
+    width: 70px;
+    height: 70px;
+    
+    background: rgba(255, 255, 255, 0.4); /* blanc à 50% d’opacité */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* contour blanc à 80% d’opacité */
+    border-radius: 15px;       /* arrondir les coins si tu veux */
+  
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+
+    transform: translateY(0px);
+    opacity: 0.8;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.rectangle_maps_2_download::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.2;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_maps_2_download img {
+    padding: 2%;
+}
+
+.trailer-download {
+    display: inline-flex;
+    gap: 15px;
+}
+
+.rectangle_maps_2_download:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* MAP 2 */
+
+.home_p {
+    position: absolute;
+    font-size: 5rem;
+    font-family: 'Minecraftia';
+    text-shadow: 9px 9px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    top: 103%;
+    /*left: 31%;*/
+    left: 38%;
+}
+
+/* IMAGES PORTFOLIO */
+
+.rectangle_portfolio_1 {
+    position: absolute;
+    left: 7%;
+    top: 115%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.rectangle_portfolio_2 {
+    position: absolute;
+    left: 53%;
+    top: 115%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+/**/
+
+.rectangle_portfolio_3 {
+    position: absolute;
+    left: 7%;
+    top: 165%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.rectangle_portfolio_4 {
+    position: absolute;
+    left: 53%;
+    top: 165%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+/**/
+
+.rectangle_portfolio_5 {
+    position: absolute;
+    left: 7%;
+    top: 215%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.rectangle_portfolio_6 {
+    position: absolute;
+    left: 53%;
+    top: 215%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+/**/
+
+.rectangle_portfolio_7 {
+    position: absolute;
+    left: 7%;
+    top: 265%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.rectangle_portfolio_8 {
+    position: absolute;
+    left: 53%;
+    top: 265%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+/**/
+
+.rectangle_portfolio_9 {
+    position: absolute;
+    left: 7%;
+    top: 315%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.rectangle_portfolio_10 {
+    position: absolute;
+    left: 53%;
+    top: 315%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+/**/
+
+.rectangle_portfolio_11 {
+    position: absolute;
+    left: 7%;
+    top: 365%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.rectangle_portfolio_12 {
+    position: absolute;
+    left: 53%;
+    top: 365%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+/**/
+
+.rectangle_portfolio_13 {
+    position: absolute;
+    left: 31%;
+    top: 415%;
+
+    width: 768px;
+    height: 404px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/**/
+/*rectangle_footer*/
+
+.rectangle_footer_portfolio {
+    position: relative;
+    top: 4250px;
+    width: 100%;              /* largeur du rectangle */
+    height: 180px;             /* hauteur du rectangle */
+    background: rgba(0, 0, 0, 0.4); /* blanc à 50% d’opacité */
+    backdrop-filter: blur(10px); /* flou du fond derrière le rectangle */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+    overflow: hidden;          /* pour contenir le pseudo-élément du bruit */
+}
+
+.rectangle_footer_portfolio::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.1;              /* intensité du bruit */
+    pointer-events: none;      /* pour ne pas bloquer les interactions */
+}
+
+.contenu_rectangle_footer_portfolio {
+    padding: 1%;
+}
+
+.contenu_rectangle_footer_portfolio p {
+    font-size: 2.75rem;
+    text-align: center;
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Minecraftia';
+    color: white;
+}
